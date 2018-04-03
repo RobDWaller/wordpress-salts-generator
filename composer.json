@@ -1,6 +1,6 @@
 {
     "name": "rbdwllr/wordpress-salts-generator",
-    "description": "A salts generator for WordPress that works both with wp-config and .env files.",
+    "description": "A key and salts generator for WordPress that works with both wp-config and .env files.",
     "type": "library",
     "license": "MIT",
     "authors": [

@@ -9,6 +9,7 @@
             "email": "rdwaller1984@gmail.com"
         }
     ],
+    "keywords": ["wordpress", "salts", "keys", "cli"],
     "require": {
         "php": ">=7.0.0",
         "paragonie/random-lib": "2.0.*"

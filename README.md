@@ -9,7 +9,7 @@ A key and salts generator for WordPress that works with both wp-config and .env 
 
 Their are two simple commands available for generating the keys and salts.
 
-```shell
+```
 // Generates traditional WordPress 'define' keys and salts.
 vendor/bin/wpsalts traditional
 
@@ -23,7 +23,7 @@ If you don't add a flag after the `vendor/bin/wpsalts` command it will output th
 
 ### Tradition WordPress
 
-```php
+```
 define('AUTH_KEY', 'dva\uhm"cDc<$U5E> )euW<UzK{ WQ7tt;j:paBPyY16<&f;b|n]|pj9%|=xRA;'');
 define('SECURE_AUTH_KEY', 'Q)hZ.Hp]meJI.X-:s+Cp2o4:wafkbxO}mfyp??e">bqHRC)|o(sB)9G-n4O2VJ;!');
 define('LOGGED_IN_KEY', 'kOq )c"=0>E} c;?PwD;lt0(N9N>%,#OS"]3>,!@[&]]i>G90ucaBxz2\hh]}I@Z');
@@ -36,7 +36,7 @@ define('NONCE_SALT', ' 6quTRjx9eQ"6:$QrV]!q"8%38#NGh>ODwU:tw8&nU^Ci}_[`ItiWK]e|n
 
 ### DotEnv
 
-```php
+```
 AUTH_KEY = 'EXOxcC~nqA{m{B?pw$$G^kIll&j@7K~\+rGaD!84>J^C2H.w"U\Ut<55\&W[ IdS'
 SECURE_AUTH_KEY = 'z =Q9?I),/%7`E0jEM(#5VV'S NdLFYL<e2-jSyQoV*Jzxbs3`oIs;pZHcEH"2L&'
 LOGGED_IN_KEY = 'H #u*_!('^[s>=4?$.s3?yo9KJk8Lv-Dn O6,ZCE>aFh-5KaXbBzV9#^t9rJuTgt'

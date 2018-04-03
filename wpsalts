@@ -1,7 +1,17 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+$paths = [
+    __DIR__.'/vendor/autoload.php',
+    __DIR__.'/../autoload.php'
+];
+
+foreach ($paths as $path) {
+    if (file_exists($path)) {
+        require_once $path;
+        break;
+    }
+}
 
 $salts = new WPSalts\Salts;
 

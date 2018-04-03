@@ -5,6 +5,22 @@ A key and salts generator for WordPress that works with both wp-config and .env 
 - This library is for use with a composer setup of WordPress.
 - Keys and salts are generated via the command line.
 
+## Installation
+
+To install this library either use the composer require command.
+
+```
+composer require rbdwllr/wordpress-salts-generator dev-master
+```
+
+Or add it straight to your `composer.json` file and run `composer update`.
+
+```
+require: {
+    "rbdwllr/wordpress-salts-generator": "dev-master"
+}
+```
+
 ## Commands
 
 Their are two simple commands available for generating the keys and salts.

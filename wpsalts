@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$salts = new WPSalts\Salts;
+
+if ($argv[1] === 'dotenv') {
+    echo "\33[33mCopy and paste these keys and salts into your \33[32m.env\33[33m file.\33[0m" . PHP_EOL . PHP_EOL;
+    echo "\33[32m" . $salts->dotEnv() . "\33[0m";
+    die();
+}
+
+if ($argv[1] === 'traditional') {
+    echo "\33[33mCopy and paste these keys and salts into your \33[32mwp-config.php\33[33m file.\33[0m" . PHP_EOL . PHP_EOL;
+    echo "\33[32m" . $salts->traditional() . "\33[0m";
+    die();
+}
+
+echo "\33[33mCopy and paste these keys and salts into your \33[32mwp-config.php\33[33m file.\33[0m" . PHP_EOL . PHP_EOL;
+echo "\33[32m" . $salts->traditional() . "\33[0m";
+die();

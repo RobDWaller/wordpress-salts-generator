@@ -27,5 +27,7 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
-    }
+    },"bin": [
+        "wpsalts"
+    ]
 }

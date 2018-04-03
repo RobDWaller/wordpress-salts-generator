@@ -28,10 +28,10 @@ class Salts
         $salts = $this->wordPressSalts();
 
         return array_reduce(array_keys($salts), function ($saltsString, $key) use ($salts) {
-                $saltsString .= "define('$key', '$salts[$key]');" . PHP_EOL;
+            $saltsString .= "define('$key', '$salts[$key]');" . PHP_EOL;
 
-                return $saltsString;
-            }, '');
+            return $saltsString;
+        }, '');
     }
 
     public function dotEnv(): string
@@ -39,9 +39,9 @@ class Salts
         $salts = $this->wordPressSalts();
 
         return array_reduce(array_keys($salts), function ($saltsString, $key) use ($salts) {
-                $saltsString .= "$key = '$salts[$key]'" . PHP_EOL;
+            $saltsString .= "$key = '$salts[$key]'" . PHP_EOL;
 
-                return $saltsString;
-            }, '');
+            return $saltsString;
+        }, '');
     }
 }

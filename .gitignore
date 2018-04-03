@@ -1,3 +1,4 @@
 vendor/
 Vagrantfile
 .vagrant/
+composer.lock

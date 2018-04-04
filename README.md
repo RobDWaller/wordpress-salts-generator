@@ -10,14 +10,14 @@ A key and salts generator for WordPress that works with both wp-config and .env 
 To install this library either use the composer require command.
 
 ```
-composer require rbdwllr/wordpress-salts-generator dev-master
+composer require rbdwllr/wordpress-salts-generator 0.1.*
 ```
 
 Or add it straight to your `composer.json` file and run `composer update`.
 
 ```
 require: {
-    "rbdwllr/wordpress-salts-generator": "dev-master"
+    "rbdwllr/wordpress-salts-generator": "0.1.*"
 }
 ```
 
@@ -33,13 +33,25 @@ vendor/bin/wpsalts traditional
 vendor/bin/wpsalts dotenv
 ```
 
-If you don't add a flag after the `vendor/bin/wpsalts` command it will output the traditional WordPress salts and keys.
+If you don't add a command the `vendor/bin/wpsalts` command it will output the traditional WordPress salts and keys.
+
+### Append to File
+
+If you would like to append the keys directly to the end of an .env file you can use the `--clean` flag as follows.
+
+```
+vendor/bin/wpsalts dotenv --clean >> .env
+```
+
+The clean flag removes any messaging around the output and the `>>` operator says append the output to the end of the .env file on a new line.
 
 ## Output Examples
 
-### Tradition WordPress
+### Traditional WordPress
 
 ```
+Copy and paste these keys and salts into your wp-config.php file.
+
 define('AUTH_KEY', 'dva\uhm"cDc<$U5E> )euW<UzK{ WQ7tt;j:paBPyY16<&f;b|n]|pj9%|=xRA;'');
 define('SECURE_AUTH_KEY', 'Q)hZ.Hp]meJI.X-:s+Cp2o4:wafkbxO}mfyp??e">bqHRC)|o(sB)9G-n4O2VJ;!');
 define('LOGGED_IN_KEY', 'kOq )c"=0>E} c;?PwD;lt0(N9N>%,#OS"]3>,!@[&]]i>G90ucaBxz2\hh]}I@Z');
@@ -53,6 +65,8 @@ define('NONCE_SALT', ' 6quTRjx9eQ"6:$QrV]!q"8%38#NGh>ODwU:tw8&nU^Ci}_[`ItiWK]e|n
 ### DotEnv
 
 ```
+Copy and paste these keys and salts into your .env file.
+
 AUTH_KEY = 'EXOxcC~nqA{m{B?pw$$G^kIll&j@7K~\+rGaD!84>J^C2H.w"U\Ut<55\&W[ IdS'
 SECURE_AUTH_KEY = 'z =Q9?I),/%7`E0jEM(#5VV'S NdLFYL<e2-jSyQoV*Jzxbs3`oIs;pZHcEH"2L&'
 LOGGED_IN_KEY = 'H #u*_!('^[s>=4?$.s3?yo9KJk8Lv-Dn O6,ZCE>aFh-5KaXbBzV9#^t9rJuTgt'

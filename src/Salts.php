@@ -5,8 +5,20 @@ namespace WPSalts;
 use WPSalts\Random\Generator;
 use RandomLib\Factory;
 
+/**
+ * Class that generates WordPress salts and keys used in authentication and
+ * security. Generates the salts and keys in the traditional 'define'
+ * WordPress manner and the new Composer driven DotEnv format.
+ *
+ * @author Rob Waller <rdwaller1984@gmail.com>
+ */
 class Salts
 {
+    /**
+     * Generate and return all the WordPress salts as an array.
+     *
+     * @return array
+     */
     public function wordPressSalts(): array
     {
         $generator = new Generator(new Factory);
@@ -23,6 +35,13 @@ class Salts
         return $salts;
     }
 
+    /**
+     * Gets an array of WordPress salts and then reduces them to a string for
+     * output to the CLI. Returns them in the traditional WordPress define
+     * format used in wp-config.php files.
+     *
+     * @return string
+     */
     public function traditional(): string
     {
         $salts = $this->wordPressSalts();
@@ -34,6 +53,12 @@ class Salts
         }, '');
     }
 
+    /**
+     * Gets an array of WordPress salts and then reduces them to a string for
+     * output to the CLI. Returns them in the DotEnv format used in .env files.
+     *
+     * @return string
+     */
     public function dotEnv(): string
     {
         $salts = $this->wordPressSalts();

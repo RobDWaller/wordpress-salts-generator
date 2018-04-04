@@ -38,7 +38,7 @@ $salts = new WPSalts\Salts;
  */
 if ($argv[1] === 'dotenv') {
     if ($argv[2] === '--clean') {
-        echo "\33[32m" . $salts->dotEnv() . "\33[0m";
+        echo $salts->dotEnv();
         die();
     }
     echo "\33[33mCopy and paste these keys and salts into your \33[32m.env\33[33m file.\33[0m" . PHP_EOL . PHP_EOL;
@@ -52,7 +52,7 @@ if ($argv[1] === 'dotenv') {
  */
 if ($argv[1] === 'traditional') {
     if ($argv[2] === '--clean') {
-        echo "\33[32m" . $salts->traditional() . "\33[0m";
+        echo $salts->traditional();
         die();
     }
     echo "\33[33mCopy and paste these keys and salts into your \33[32mwp-config.php\33[33m file.\33[0m" . PHP_EOL . PHP_EOL;

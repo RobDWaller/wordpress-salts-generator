@@ -43,7 +43,7 @@ If you would like to append the keys directly to the end of an .env file you can
 vendor/bin/wpsalts dotenv --clean >> .env
 ```
 
-The clean flag removes any messaging around the output and the `>>` operator says append the output to the end of the .env file on a new line.
+The clean flag removes any messaging and formatting around the output, and the `>>` operator appends the output to the end of the .env file on a new line.
 
 ## Output Examples
 

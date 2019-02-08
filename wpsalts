@@ -37,7 +37,7 @@ $salts = new WPSalts\Salts;
  * Return the WordPress salts in a DotEnv format for use in .env files.
  */
 if ($argv[1] === 'dotenv') {
-    if ($argv[2] === '--clean') {
+    if (isset($argv[2]) && $argv[2] === '--clean') {
         echo $salts->dotEnv();
         die();
     }
@@ -51,7 +51,7 @@ if ($argv[1] === 'dotenv') {
  * use in wp-config.php files.
  */
 if ($argv[1] === 'traditional') {
-    if ($argv[2] === '--clean') {
+    if (isset($argv[2]) && $argv[2] === '--clean') {
         echo $salts->traditional();
         die();
     }

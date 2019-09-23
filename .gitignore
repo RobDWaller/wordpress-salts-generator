@@ -2,3 +2,6 @@ vendor/
 Vagrantfile
 .vagrant/
 composer.lock
+docker-compose.yml
+Dockerfile
+coverage

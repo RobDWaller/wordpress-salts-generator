@@ -72,13 +72,13 @@ class SaltsTest extends TestCase
 
         $result = $salts->dotEnv();
 
-        $this->assertRegExp('/^AUTH_KEY\s=\s\'.*/', $result);
-        $this->assertRegExp('/SECURE_AUTH_KEY\s=\s\'.*/', $result);
-        $this->assertRegExp('/LOGGED_IN_KEY\s=\s\'.*/', $result);
-        $this->assertRegExp('/NONCE_KEY\s=\s\'.*/', $result);
-        $this->assertRegExp('/AUTH_SALT\s=\s\'.*/', $result);
-        $this->assertRegExp('/SECURE_AUTH_SALT\s=\s\'.*/', $result);
-        $this->assertRegExp('/LOGGED_IN_SALT\s=\s\'.*/', $result);
-        $this->assertRegExp('/NONCE_SALT\s=\s\'.*/', $result);
+        $this->assertRegExp('/^AUTH_KEY=\'.*/', $result);
+        $this->assertRegExp('/SECURE_AUTH_KEY=\'.*/', $result);
+        $this->assertRegExp('/LOGGED_IN_KEY=\'.*/', $result);
+        $this->assertRegExp('/NONCE_KEY=\'.*/', $result);
+        $this->assertRegExp('/AUTH_SALT=\'.*/', $result);
+        $this->assertRegExp('/SECURE_AUTH_SALT=\'.*/', $result);
+        $this->assertRegExp('/LOGGED_IN_SALT=\'.*/', $result);
+        $this->assertRegExp('/NONCE_SALT=\'.*/', $result);
     }
 }

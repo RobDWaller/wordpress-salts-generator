@@ -10,14 +10,14 @@ A key and salts generator for WordPress that works with both wp-config and .env 
 To install this library either use the composer require command.
 
 ```
-composer require rbdwllr/wordpress-salts-generator 0.1.*
+composer require rbdwllr/wordpress-salts-generator
 ```
 
 Or add it straight to your `composer.json` file and run `composer update`.
 
 ```
 require: {
-    "rbdwllr/wordpress-salts-generator": "0.1.*"
+    "rbdwllr/wordpress-salts-generator": "0.3.*"
 }
 ```
 
@@ -52,14 +52,14 @@ The clean flag removes any messaging and formatting around the output, and the `
 ```
 Copy and paste these keys and salts into your wp-config.php file.
 
-define('AUTH_KEY', 'dva\uhm"cDc<$U5E> )euW<UzK{ WQ7tt;j:paBPyY16<&f;b|n]|pj9%|=xRA;'');
-define('SECURE_AUTH_KEY', 'Q)hZ.Hp]meJI.X-:s+Cp2o4:wafkbxO}mfyp??e">bqHRC)|o(sB)9G-n4O2VJ;!');
-define('LOGGED_IN_KEY', 'kOq )c"=0>E} c;?PwD;lt0(N9N>%,#OS"]3>,!@[&]]i>G90ucaBxz2\hh]}I@Z');
-define('NONCE_KEY', 't>ZZepdu/(8>4|3k5covc7R'":*rhyY>{eZjK4HB:@i5l/d8XTTc(P.v(H|Q/mg4');
-define('AUTH_SALT', '{B>CWa$zjM+KN(,(-4yD(pFfdeF 07mPp1xOMkL bDm!X>}p){~(J4\~-AO+0-ZV');
-define('SECURE_AUTH_SALT', 'lr'_2T^{O/<LK v<:fa^Sw-i]5\t yt.:I#?kSa(l 8A7H%/!E(c1dzX(r[}3YpB');
-define('LOGGED_IN_SALT', '%^]P]dVVJ"Pgd[tW-.}mMvx..yRW+99E7yCVb:PYA-k1[2W0LHM^fG'XtPsuGF"y');
-define('NONCE_SALT', ' 6quTRjx9eQ"6:$QrV]!q"8%38#NGh>ODwU:tw8&nU^Ci}_[`ItiWK]e|n t<f /');
+define('AUTH_KEY', '=mFFLjM:X!dxva7Y=`5nClz%UadDmXF9-J-,xO!bK0,5Fwu`uITB;5KD9Yu#7xG{');
+define('SECURE_AUTH_KEY', 'o&07-T~"h3Jv8OV>)v-oyFvYWRT3b*[Az8(Jc;>DApYm[puqCQk^L(9V0N6:7+U~');
+define('LOGGED_IN_KEY', '*7Sow*vcj,i(HYvv3r;[dQ#o7M#9+`@b}Qn-`8~Br6N:!w#$6w~[[^og0%~5|ao`');
+define('NONCE_KEY', '<`C_:KN-{or&MSqVXlPC)}0~f0`_Y!8+VLm%fZ[7z7~c5R0By,%#hgoTJ1x%l_7`');
+define('AUTH_SALT', 'pgAj7O<Cc_#`yq2%AP.Lp*]>+^WabfF-[Syd&2y6I2-:ZTj@:k>]Z`DE1r_<8E>B');
+define('SECURE_AUTH_SALT', 'H>k`b{Zz`4!6GyyNs4?9Hk,`*x4)/LM(sFjAsUpc@":bf6G/JtVcjF/M?3Cp},tB');
+define('LOGGED_IN_SALT', 'QM"&@}=%q9B&T,_8qlGA:DkUib/U(ar>:b)B|*SCJj_/2Et8k<D@mgLs@#7$r}lM');
+define('NONCE_SALT', 'r6aQlOrKyEeG"?.l<]1f1WP#VPhti/Oa(abI6r:cAH>G:bWbp1j%|,&]v#sI,1<M');
 ```
 
 ### DotEnv
@@ -67,14 +67,14 @@ define('NONCE_SALT', ' 6quTRjx9eQ"6:$QrV]!q"8%38#NGh>ODwU:tw8&nU^Ci}_[`ItiWK]e|n
 ```
 Copy and paste these keys and salts into your .env file.
 
-AUTH_KEY = 'EXOxcC~nqA{m{B?pw$$G^kIll&j@7K~\+rGaD!84>J^C2H.w"U\Ut<55\&W[ IdS'
-SECURE_AUTH_KEY = 'z =Q9?I),/%7`E0jEM(#5VV'S NdLFYL<e2-jSyQoV*Jzxbs3`oIs;pZHcEH"2L&'
-LOGGED_IN_KEY = 'H #u*_!('^[s>=4?$.s3?yo9KJk8Lv-Dn O6,ZCE>aFh-5KaXbBzV9#^t9rJuTgt'
-NONCE_KEY = 'bdt.I)jh6Nz/e,|S-QepePTSd@93E$vk%oX1yd"A,DNExX+v&;>2>^Ni$G%l&YC9'
-AUTH_SALT = '$81GB@i@ 0qW@~<<M$j`>yxQ )Q56PyJ6ukOnH]@_:}x-/BAm-Io]=CyJU^T(|7%'
-SECURE_AUTH_SALT = '/k4O1L)q@7wJ^~;b`"U6X9s,~7iRAc8v-ypMOM|X.yN=0"gVh|x~$V +Mw(eZ33T'
-LOGGED_IN_SALT = '_o_jpvW#iq}l-'Kc&vU}Tht\w,-:462z8=;!x3 =1NyD&[>k^EAZjm(F#=X+T(G''
-NONCE_SALT = '.e1j7;9aWlqoBRdLEe?Vh9{m8V7:<PlAFa@,,(2o5En)^%x*[i\6sq[=*b#+-A0='
+AUTH_KEY='4<0s2LBv7dh3FT6q,+[D~2H}y{*l&ym!<DR8|{a.Jx5[OO^Zt9B0|BLc-j)fK!{Q'
+SECURE_AUTH_KEY=',>x,3"l:+WRU;2YjAaZ%+-9EZLJ54gRM6ni.{ial!b:s~e9&%}{;*1K5DafS=QEl'
+LOGGED_IN_KEY='WBi)>yy"C9v`}<Q!SbPelOk5DRnwh2Mm?gaLU5"8Wa|y"}-!M"vj#Fco8OlcKDOB'
+NONCE_KEY='vZ<Ki/O^PE[6uKoPz@kQHHey4pU+0NM=$<!d[{G9yLNSh<o!6-2?Ys2]Na&_A+@W'
+AUTH_SALT='Gr_`UQ+ZD4mLKm^J^r[GJzabUv?TLE>q?zssT~}9Q|9xuQ(JP/f*Mp6b1W1`7lpL'
+SECURE_AUTH_SALT='>7|[N7Pc^K~G5sQ-<5_ia`Se^YD[=t0dgTUCs}|Y7^t-+4u4rVjW=PE%aDBC=}u`'
+LOGGED_IN_SALT='g@-n~D=~OF6%]Kzv+ZtD),MeUxcN:sWX@3rOJX<CguK:=GY/WL4.(xg?jH"gs;D5'
+NONCE_SALT='hv/:PhxAL-[m@<,^&y5wRj9>dl<VeAtR"o}qu0.;!njy_LPn>W_>~HBGQn?Pcf[C'
 ```
 
 ## Author

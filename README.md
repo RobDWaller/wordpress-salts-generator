@@ -1,4 +1,5 @@
 # WordPress Salts Generator
+[![Build Status](https://travis-ci.org/RobDWaller/wordpress-salts-generator.svg?branch=master)](https://travis-ci.org/RobDWaller/wordpress-salts-generator)
 
 A key and salts generator for WordPress that works with both wp-config and .env files.
 
